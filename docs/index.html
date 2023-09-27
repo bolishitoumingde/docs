@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <!-- 文章内导航 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css"> -->
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       // 加载自定义侧边栏
       loadSidebar: true,
       // 自定义侧边栏后默认不会再生成目录，通过设置生成目录的最大层级开启这个功能
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       // 切换页面后自动跳转到页面顶部
       auto2top: true,
       // 在侧边栏中出现的网站图标，可以使用CSS来更改大小
@@ -89,11 +89,11 @@
         whereToPlace: "bottom",  // "top" or "bottom", default to "bottom"
       },
       // 文章内导航
-      toc: {
-        scope: '.markdown-section',
-        headings: 'h1, h2, h3',
-        title: '导航',
-      },
+      // toc: {
+      //   scope: '.markdown-section',
+      //   headings: 'h1, h2, h3',
+      //   title: '导航',
+      // },
 
     }
   </script>
@@ -111,13 +111,13 @@
   <!-- docsify的分页导航插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 字数统计 -->
-  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   <!-- 代码隐藏 -->
   <script src="https://unpkg.com/docsify-hide-code"></script>
   <!-- 更新时间 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
   <!-- 文章内导航 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script> -->
 </body>
 
 </html>
