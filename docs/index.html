@@ -51,6 +51,12 @@
         // 注意：仅适用于 paths: 'auto' 模式
       },
       // 启用全局搜索并配置↑↑↑
+      // 代码复制框
+      copyCode: {
+        buttonText: '复制',
+        errorText: '失败',
+        successText: '成功',
+      },
       // 分页
       pagination: {
         previousText: '上一章节',
@@ -89,8 +95,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
   <!-- 开启图片缩放支持 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码 -->
+  <!-- 代码复制框 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- <script src="https://unpkg.com/docsify-copy-code@2"></script> -->
   <!-- docsify的分页导航插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 字数统计 -->
