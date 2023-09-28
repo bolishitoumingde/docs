@@ -49,5 +49,6 @@ IF "%choose%" EQU "202" (
 pause
 ```
 
+## 文件下载
 
-
+[Java版本切换工具](https://alist.boliguide.cn/d/%E6%9C%AC%E6%9C%BA%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7.bat?sign=7S-wp5P5G73WGwxnNOHnysIX6UqhNXx5b7n8JCXis7c=:0)
