@@ -955,7 +955,7 @@ Shift + F7
 Ctrl + Alt + R/A
 ```
 
-### 选择对面的差异窗格：
+#### 选择对面的差异窗格：
 
 ```
 Ctrl + Shift + Tab
