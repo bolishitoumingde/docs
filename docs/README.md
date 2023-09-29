@@ -1,6 +1,6 @@
 **AList网盘**
 
-> [AList网盘](https://os.boliguide.cn:5244/)
+> [AList网盘](https://os.boliguide.cn:10086/)
 
 **Picx图床**
 
