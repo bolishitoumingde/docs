@@ -4,6 +4,6 @@
 
 **Picx图床**
 
-> [PicX 图床](https://picx.boliguide.cn)
+> [PicX 图床](http://os.boliguide.cn:10087/#/upload)
 
 ![aira](https://cdn.jsdelivr.net/gh/bolishitoumingde/hexo_img@main/_aria.jpg)
