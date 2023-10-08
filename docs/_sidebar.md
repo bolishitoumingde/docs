@@ -5,6 +5,7 @@
   * [批量修改多级文件夹内的文件后缀名](windows/批量修改多级文件夹内的文件后缀名)
 * **Linux**
   * **docker**
+    * [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
   * **openwrt**
     * [docker系统屏幕输出](linux/openwrt/docker系统屏幕输出)
   * [acme配置泛域名证书](linux/acme配置泛域名证书)
