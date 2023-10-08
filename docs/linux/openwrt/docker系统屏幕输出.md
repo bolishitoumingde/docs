@@ -58,4 +58,3 @@
      lsmod | grep HDMI
      ```
    
-     
