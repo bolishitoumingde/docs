@@ -4,14 +4,15 @@
   * [Java版本切换工具](windows/Java版本切换工具)
   * [批量修改多级文件夹内的文件后缀名](windows/批量修改多级文件夹内的文件后缀名)
 * **Linux**
-  * **docker**
-    * [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
-  * **openwrt**
-    * [docker系统屏幕输出](linux/openwrt/docker系统屏幕输出)
   * [acme配置泛域名证书](linux/acme配置泛域名证书)
   * [CentOS完全卸载Python2.7和yum并重新安装](linux/CentOS完全卸载Python2.7和yum并重新安装)
   * [Linux后台运行终止进程](linux/Linux后台运行终止进程)
+* **docker**
+  * [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
 * **idea**
   * [idea快捷键大全](code/idea/idea快捷键大全)
   * [EasyCode设置备份](code/idea/EasyCode设置备份)
   * [文件和代码模板](code/idea/文件和代码模板)
+* **爱餐**
+  * [宫保鸡丁](love/menu/宫保鸡丁)
+  * [鱼香肉丝](love/menu/鱼香肉丝)
