@@ -1,5 +1,5 @@
-> **AList网盘**  [AList网盘](https://os.boliguide.cn:10086/)  
+> **AList网盘**  [AList网盘](https://alist.boliguide.cn/) 
 >
-> **PicX 图床**  [PicX 图床](http://os.boliguide.cn:10087/#/upload)
+> **PicX 图床**  [PicX 图床](http://picx.boliguide.cn/#/upload) 
 
 ![aira](https://cdn.jsdelivr.net/gh/bolishitoumingde/hexo_img@main/_aria.jpg)
