@@ -57,7 +57,7 @@ pause
 
 ### 文件下载
 
-敬请祈祷
+[Java版本切换工具.bat](https://alist.200109.top/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7.bat?sign=G8vFalP0YAD8TOqJGpbBrv7B5UZryZLQYIXTI0VBwHA=:0)
 
 ## 自动版本
 
@@ -85,6 +85,9 @@ pause
 
 ```bat
 @echo off
+::获取管理员执行权限
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+cd /d "%~dp0"
 echo ------------------------------------------------
 echo ------------------------------------------------
 echo 注意：如果Java安装位置是默认位置(C:\Program Files\Java)则本程序放置在任意位置均可，如果你自定义了安装位置，请将本程序放置到安装位置根目录
@@ -135,8 +138,8 @@ for /L %%i in (0,1,%length%) do (
 	setx "JAVA_HOME_!versionList[%%i]!" !pathList[%%i]! /m
 )
 setx "JAVA_HOME" "%%JAVA_HOME_!versionList[0]!%%" /m
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "Path" /t REG_EXPAND_SZ /d "%Path%;%%JAVA_HOME%%\bin" /f
-
+::reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "Path" /t REG_EXPAND_SZ /d "%Path%;%%JAVA_HOME%%\bin" /f
+setx PATH "%PATH%;%%JAVA_HOME%%\bin;" /m
 echo ------------------------------------------------
 echo 自动构建环境变量完成
 echo ------------------------------------------------
@@ -151,6 +154,9 @@ pause
 
 ```bat
 @echo off
+::获取管理员执行权限
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+cd /d "%~dp0"
 echo ------------------------------------------------
 echo ------------------------------------------------
 echo 当前Java版本为:
@@ -177,14 +183,27 @@ echo ------------------------------------------------
 
 :second
 set "versionList="
+set length=0
 for /d %%a in ("%javaPath%*") do (
+	set versionList[!length!]="%%~nxa"
+	set /a length+=1
 	echo %%~nxa	%%~pnxa
 )
 echo ------------------------------------------------
 
+set /a length-=1
 :third
-set /P versionName=请输入需要切换的Java版本名称：
-setx "JAVA_HOME" "%%JAVA_HOME_%versionName%%%" /m
+for /L %%i in (0,1,%length%) do (
+	echo 选项：【%%i】 版本号：!versionList[%%i]!
+)
+set /P version=请输入需要切换的Java版本（0-%length%）：
+IF %version% LEQ %length% (
+	setx "JAVA_HOME" "%%JAVA_HOME_!versionList[%version%]!%%" /m
+) ELSE (
+    echo 输入错误，请重新输入
+	echo ------------------------------------------------
+	goto third
+)
 
 echo ------------------------------------------------
 echo 切换版本完成
@@ -198,4 +217,6 @@ pause
 
 ### 文件下载
 
-敬请期待
+[Java环境变量构建工具.bat](https://alist.200109.top/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7.bat?sign=dzPvJOcZxmSRHIPM6mg4kK5kutQAnZ2OgdLERWYhAMI=:0)
+
+[Java版本切换工具v2.bat](https://alist.200109.top/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7v2.bat?sign=wmRQkHh3YPoRFnyTfhOY0lX3kF7lAiKtOoOvOgOFmKo=:0)
