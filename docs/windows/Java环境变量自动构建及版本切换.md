@@ -187,7 +187,7 @@ set length=0
 for /d %%a in ("%javaPath%*") do (
 	set versionList[!length!]="%%~nxa"
 	set /a length+=1
-	echo %%~nxa	%%~pnxa
+	echo %%~nxa	%%~dpnxa
 )
 echo ------------------------------------------------
 
