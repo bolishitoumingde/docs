@@ -2,6 +2,6 @@
 >
 > **AList网盘**  [AList网盘](https://alist.boliguide.cn/) 
 >
-> **PicX 图床**  [PicX 图床](https://picx.boliguide.cn/#/upload) 
+> **YesPlayMusic**  [YesPlayMusic (boliguide.cn)](https://music.boliguide.cn/) 
 
 ![aira](https://cdn.jsdelivr.net/gh/bolishitoumingde/hexo_img@main/_aria.jpg)
