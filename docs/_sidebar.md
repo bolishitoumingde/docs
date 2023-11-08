@@ -9,6 +9,7 @@
   * [Linux后台运行终止进程](linux/Linux后台运行终止进程)
 * **docker**
   * [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
+  * [docker详解](linux/docker/docker详解)
 * **idea**
   * [idea快捷键大全](code/idea/idea快捷键大全)
   * [EasyCode设置备份](code/idea/EasyCode设置备份)
