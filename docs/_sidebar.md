@@ -14,6 +14,8 @@
   * [idea快捷键大全](code/idea/idea快捷键大全)
   * [EasyCode设置备份](code/idea/EasyCode设置备份)
   * [文件和代码模板](code/idea/文件和代码模板)
+* **code**
+  * [jvm](code/java/jvm)
 * **家庭**
   * [家庭网络拓扑](home/家庭网络拓扑)
 * **爱餐**
