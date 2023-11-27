@@ -17,6 +17,7 @@
   * [文件和代码模板](code/idea/文件和代码模板)
 * **code**
   * [jvm](code/java/jvm/jvm)
+  * [Telecom](code/js/telecom)
 * **家庭**
   * [家庭网络拓扑](home/家庭网络拓扑)
 * **爱餐**
