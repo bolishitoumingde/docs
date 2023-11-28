@@ -18,6 +18,7 @@
 * **code**
   * [jvm](code/java/jvm/jvm)
   * [Telecom](code/js/telecom)
+  * [去除网页广告](code/js/killAds)
 * **家庭**
   * [家庭网络拓扑](home/家庭网络拓扑)
 * **爱餐**
