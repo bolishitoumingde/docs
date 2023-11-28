@@ -7,8 +7,8 @@
 // @version      1.0.1
 // @description  给中国电信网上大学知识中心增加 复制 & 搜索 按钮，当考试页面 "我要交卷" 上方出现 “已允许切屏/复制” 时表示脚本已启用
 // @author       bolishitoumingde
-// @match        https://kc.zhixueyun.com/
-// @match        *://*/*
+// @match        kc.zhixueyun.com
+// @match        wenku.baidu.com
 // @run-at       document-end
 // @grant        GM_getValue
 // @grant        GM_setValue
