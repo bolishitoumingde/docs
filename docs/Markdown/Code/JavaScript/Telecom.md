@@ -38,12 +38,15 @@ var $ = unsafeWindow.jQuery || window.jQuery;
 var Clipboard = window.ClipboardJS;
 
 var getSelectedText = function () {
-  if (window.getSelection)
+  if (window.getSelection) {
     return window.getSelection().toString();
-  if (document.getSelection)
+  }
+  if (document.getSelection) {
     return document.getSelection().toString();
-  if (document.selection)
+  }
+  if (document.selection) {
     return document.selection.createRange().text;
+  }
   return "";
 };
 
@@ -79,6 +82,7 @@ function initEvent () {
   var event = setInterval(() => {
     if (document.body) {
       clearInterval(event);
+
       document.addEventListener("mouseup", function (e) {
         // 在于判断是否点击了复制按钮和搜索按钮，如果点击则不弹出按钮
         if ($(e) == $("#_copy") || $(e) == $("#_search")) {
@@ -107,7 +111,7 @@ function initEvent () {
         var urlStr = url.toString();
         if (urlStr.match("/exam/exam/answer-paper/")) {
           // 搜索按钮
-          var searchTemplate = "<div id=\"_search\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: red;position: absolute; z-index:1000;left:".concat(e.pageX + 85, "px;top:").concat(e.pageY, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">搜索</div>");
+          var searchTemplate = "<div id=\"_search\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: red;position: absolute; z-index:1000;left:".concat(e.pageX + 85, "px;top:").concat(e.pageY - 15, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">搜索</div>");
           $("body").append(searchTemplate);
           $("#_search").on("mousedown", function (event) { return event.stopPropagation() })
           $("#_search").on("mouseup", function (event) { return event.stopPropagation() })
@@ -117,16 +121,6 @@ function initEvent () {
           })
         }
       })
-
-      var allowSwitchAndCopyButton = `<a id="allowSwitchAndCopy" class="btn block w-half m-top">已允许切屏/复制</a>`
-      // 添加允许切屏和复制的按钮
-      var event = setInterval(() => {
-        if (document.body) {
-          clearInterval(event)
-          $(".side-main #D165submit").parent().prepend(allowSwitchAndCopyButton)
-          // $(".side-main #allowSwitchAndCopy").click(allowSwitchAndCopy)
-        }
-      }, 100);
     }
   }, 100)
 }
@@ -202,6 +196,12 @@ function initExam () {
     }
   });
   initEvent();
+  // 添加允许切屏和复制的按钮
+  setTimeout(() => {
+    var allowSwitchAndCopyButton = `<a id="allowSwitchAndCopy" class="btn block w-half m-top">已允许切屏/复制</a>`
+    $(".side-main #D165submit").parent().prepend(allowSwitchAndCopyButton)
+    // $(".side-main #allowSwitchAndCopy").click(allowSwitchAndCopy)
+  }, 1000)
   // initExam()
 })();
 ```
