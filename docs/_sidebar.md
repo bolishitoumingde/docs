@@ -12,8 +12,8 @@
   * [Linux后台运行终止进程](Markdown/Linux/Linux后台运行终止进程)
 
 * Docker
-  * [Docker部署PicX图床服务](Markdown/Linux/Docker/Docker部署PicX图床服务)
-  * [Docker详解](Markdown/Linux/Docker/Docker详解)
+  * [Docker部署PicX图床服务](Markdown/Docker/Docker部署PicX图床服务)
+  * [Docker详解](Markdown/Docker/Docker详解)
 
 * Idea
   * [Idea快捷键大全](Markdown/Code/Idea/Idea快捷键大全)
