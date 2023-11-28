@@ -7,28 +7,28 @@
 
 * Linux
   * [Linux](Markdown/Linux/Linux)
-  * [acme配置泛域名证书](Markdown/Linux/acme配置泛域名证书)
+  * [acme配置泛域名证书](Markdown/Linux/Acme配置泛域名证书)
   * [CentOS完全卸载Python2.7和yum并重新安装](Markdown/Linux/CentOS完全卸载Python2.7和yum并重新安装)
   * [Linux后台运行终止进程](Markdown/Linux/Linux后台运行终止进程)
 
-* docker
-  * [docker部署picx图床服务](Markdown/Linux/docker/docker部署picx图床服务)
-  * [docker详解](Markdown/Linux/docker/docker详解)
+* Docker
+  * [docker部署picx图床服务](Markdown/Linux/Docker/Docker部署PicX图床服务)
+  * [docker详解](Markdown/Linux/Docker/Docker详解)
 
-* idea
-  * [idea快捷键大全](Markdown/Code/idea/idea快捷键大全)
-  * [EasyCode设置备份](Markdown/Code/idea/EasyCode设置备份)
-  * [文件和代码模板](Markdown/Code/idea/文件和代码模板)
+* Idea
+  * [idea快捷键大全](Markdown/Code/Idea/Idea快捷键大全)
+  * [EasyCode设置备份](Markdown/Code/Idea/EasyCode设置备份)
+  * [文件和代码模板](Markdown/Code/Idea/文件和代码模板)
 
 * Code
-  * [jvm](Markdown/Code/java/jvm/jvm)
-  * [Telecom](Markdown/Code/js/telecom)
-  * [去除网页广告](Markdown/Code/js/killAds)
+  * [jvm](Markdown/Code/Java/Jvm/Jvm)
+  * [Telecom](Markdown/Code/JavaScript/Telecom)
+  * [去除网页广告](Markdown/Code/JavaScript/KillAds)
 
 * 家庭
   * [家庭网络拓扑](Markdown/Home/家庭网络拓扑)
 
 * 爱餐
-  * [宫保鸡丁](Markdown/Love/menu/宫保鸡丁)
-  * [鱼香肉丝](Markdown/Love/menu/鱼香肉丝)
+  * [宫保鸡丁](Markdown/Love/Menu/宫保鸡丁)
+  * [鱼香肉丝](Markdown/Love/Menu/鱼香肉丝)
   
