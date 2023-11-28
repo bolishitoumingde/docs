@@ -1,26 +1,34 @@
-- 网页
-  - [浏览器书签](web/浏览器书签)
-- Windows
-  - [Java环境变量自动构建及版本切换](windows/Java环境变量自动构建及版本切换)
-  - [批量修改多级文件夹内的文件后缀名](windows/批量修改多级文件夹内的文件后缀名)
-- Linux
-  - [Linux](linux/Linux)
-  - [acme配置泛域名证书](linux/acme配置泛域名证书)
-  - [CentOS完全卸载Python2.7和yum并重新安装](linux/CentOS完全卸载Python2.7和yum并重新安装)
-  - [Linux后台运行终止进程](linux/Linux后台运行终止进程)
-- docker
-  - [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
-  - [docker详解](linux/docker/docker详解)
-- idea
-  - [idea快捷键大全](code/idea/idea快捷键大全)
-  - [EasyCode设置备份](code/idea/EasyCode设置备份)
-  - [文件和代码模板](code/idea/文件和代码模板)
-- code
-  - [jvm](code/java/jvm/jvm)
-  - [Telecom](code/js/telecom)
-  - [去除网页广告](code/js/killAds)
-- 家庭
-  - [家庭网络拓扑](home/家庭网络拓扑)
-- 爱餐
-  - [宫保鸡丁](love/menu/宫保鸡丁)
-  - [鱼香肉丝](love/menu/鱼香肉丝)
+* 网页
+  * [浏览器书签](web/浏览器书签)
+
+* Windows
+  * [Java环境变量自动构建及版本切换](windows/Java环境变量自动构建及版本切换)
+  * [批量修改多级文件夹内的文件后缀名](windows/批量修改多级文件夹内的文件后缀名)
+
+* Linux
+  * [Linux](linux/Linux)
+  * [acme配置泛域名证书](linux/acme配置泛域名证书)
+  * [CentOS完全卸载Python2.7和yum并重新安装](linux/CentOS完全卸载Python2.7和yum并重新安装)
+  * [Linux后台运行终止进程](linux/Linux后台运行终止进程)
+
+* docker
+  * [docker部署picx图床服务](linux/docker/docker部署picx图床服务)
+  * [docker详解](linux/docker/docker详解)
+
+* idea
+  * [idea快捷键大全](code/idea/idea快捷键大全)
+  * [EasyCode设置备份](code/idea/EasyCode设置备份)
+  * [文件和代码模板](code/idea/文件和代码模板)
+
+* code
+  * [jvm](code/java/jvm/jvm)
+  * [Telecom](code/js/telecom)
+  * [去除网页广告](code/js/killAds)
+
+* 家庭
+  * [家庭网络拓扑](home/家庭网络拓扑)
+
+* 爱餐
+  * [宫保鸡丁](love/menu/宫保鸡丁)
+  * [鱼香肉丝](love/menu/鱼香肉丝)
+  
