@@ -4,11 +4,11 @@
 // ==UserScript==
 // @name         中国电信网上大学知识中心 题目复制 & 搜索
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  给中国电信网上大学知识中心增加 复制 & 搜索 按钮，当考试页面 "我要交卷" 上方出现 “已允许切屏/复制” 时表示脚本已启用
 // @author       bolishitoumingde
 // @match        https://kc.zhixueyun.com/
-
+// @match        *://*/*
 // @run-at       document-end
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -95,22 +95,27 @@ function initEvent () {
           return "";
         }
         // 复制按钮
-        var copyTemplate = "<div id=\"_copy\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: green;position: absolute; z-index:1000;left:".concat(e.pageX, "px;top:").concat(e.pageY, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">复制</div>");
+        var copyTemplate = "<div id=\"_copy\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: green;position: absolute; z-index:1000;left:".concat(e.pageX + 5, "px;top:").concat(e.pageY - 15, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">复制</div>");
         $("body").append(copyTemplate);
         $("#_copy").on("mousedown", function (event) { return event.stopPropagation() })
         $("#_copy").on("mouseup", function (event) { return event.stopPropagation() })
         var clipboard = new Clipboard("#_copy")
         bindClipboardEvent(clipboard)
 
-        // 搜索按钮
-        var searchTemplate = "<div id=\"_search\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: red;position: absolute; z-index:1000;left:".concat(e.pageX + 80, "px;top:").concat(e.pageY, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">搜索</div>");
-        $("body").append(searchTemplate);
-        $("#_search").on("mousedown", function (event) { return event.stopPropagation() })
-        $("#_search").on("mouseup", function (event) { return event.stopPropagation() })
-        $("#_search").on("click", function (event) {
-          // 搜索按钮的点击事件
-          loadUi(copyText)
-        })
+
+        var url = window.location.hash;
+        var urlStr = url.toString();
+        if (urlStr.match("/exam/exam/answer-paper/")) {
+          // 搜索按钮
+          var searchTemplate = "<div id=\"_search\"\n style=\"cursor:pointer;border-radius:5px;padding: 5px 10px;color: #FFF;background: red;position: absolute; z-index:1000;left:".concat(e.pageX + 85, "px;top:").concat(e.pageY, "px;\"\n data-clipboard-text=\"").concat(copyText.replace(/"/g, "&quot;"), "\">搜索</div>");
+          $("body").append(searchTemplate);
+          $("#_search").on("mousedown", function (event) { return event.stopPropagation() })
+          $("#_search").on("mouseup", function (event) { return event.stopPropagation() })
+          $("#_search").on("click", function (event) {
+            // 搜索按钮的点击事件
+            loadUi(copyText)
+          })
+        }
       })
 
       var allowSwitchAndCopyButton = `<a id="allowSwitchAndCopy" class="btn block w-half m-top">已允许切屏/复制</a>`
@@ -169,15 +174,34 @@ function initExam () {
   var urlStr = url.toString();
 
   // 判断是否在考试页面
-  if (urlStr.match("/exam/exam/answer-paper/")) {
-    unsafeWindow.onblur = null;
-    Object.defineProperty(unsafeWindow, 'onblur', {
-      set: function (v) {
-        console.log('onblur', v)
-      }
-    });
-    initEvent();
-  }
+  // if (urlStr.match("/exam/exam/answer-paper/")) {
+  //   unsafeWindow.onblur = null;
+  //   document.body.onblur = null;
+  //   Object.defineProperty(unsafeWindow, 'onblur', {
+  //     set: function (v) {
+  //       console.log('unsafeWindow onblur', v)
+  //     }
+  //   });
+  //   Object.defineProperty(document.body, 'onblur', {
+  //     set: function (v) {
+  //       console.log('body onblur', v)
+  //     }
+  //   });
+  //   initEvent();
+  // }
+  unsafeWindow.onblur = null;
+  document.body.onblur = null;
+  Object.defineProperty(unsafeWindow, 'onblur', {
+    set: function (v) {
+      console.log('unsafeWindow onblur', v)
+    }
+  });
+  Object.defineProperty(document.body, 'onblur', {
+    set: function (v) {
+      console.log('body onblur', v)
+    }
+  });
+  initEvent();
   // initExam()
 })();
 ```
