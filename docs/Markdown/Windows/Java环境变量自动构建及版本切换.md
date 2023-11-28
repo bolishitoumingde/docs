@@ -57,7 +57,7 @@ pause
 
 ### 文件下载
 
-[Java版本切换工具.bat](https://alist.200109.top/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7.bat?sign=G8vFalP0YAD8TOqJGpbBrv7B5UZryZLQYIXTI0VBwHA=:0)
+[Java版本切换工具.bat](https://www.alipan.com/s/F85KBqehZr1)
 
 ## 自动版本
 
@@ -217,6 +217,6 @@ pause
 
 ### 文件下载
 
-[Java环境变量构建工具.bat](https://alist.boliguide.cn/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7.bat?sign=dzPvJOcZxmSRHIPM6mg4kK5kutQAnZ2OgdLERWYhAMI=:0)
+[Java环境变量构建工具.bat](https://www.alipan.com/s/F85KBqehZr1)
 
-[Java版本切换工具v2.bat](https://alist.boliguide.cn/d/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/Java%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E5%B7%A5%E5%85%B7v2.bat?sign=wmRQkHh3YPoRFnyTfhOY0lX3kF7lAiKtOoOvOgOFmKo=:0)
+[Java版本切换工具v2.bat](https://www.alipan.com/s/F85KBqehZr1)
