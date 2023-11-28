@@ -7,21 +7,21 @@
 
 * Linux
   * [Linux](Markdown/Linux/Linux)
-  * [acme配置泛域名证书](Markdown/Linux/Acme配置泛域名证书)
+  * [Acme配置泛域名证书](Markdown/Linux/Acme配置泛域名证书)
   * [CentOS完全卸载Python2.7和yum并重新安装](Markdown/Linux/CentOS完全卸载Python2.7和yum并重新安装)
   * [Linux后台运行终止进程](Markdown/Linux/Linux后台运行终止进程)
 
 * Docker
-  * [docker部署picx图床服务](Markdown/Linux/Docker/Docker部署PicX图床服务)
-  * [docker详解](Markdown/Linux/Docker/Docker详解)
+  * [Docker部署PicX图床服务](Markdown/Linux/Docker/Docker部署PicX图床服务)
+  * [Docker详解](Markdown/Linux/Docker/Docker详解)
 
 * Idea
-  * [idea快捷键大全](Markdown/Code/Idea/Idea快捷键大全)
+  * [Idea快捷键大全](Markdown/Code/Idea/Idea快捷键大全)
   * [EasyCode设置备份](Markdown/Code/Idea/EasyCode设置备份)
   * [文件和代码模板](Markdown/Code/Idea/文件和代码模板)
 
 * Code
-  * [jvm](Markdown/Code/Java/Jvm/Jvm)
+  * [Jvm](Markdown/Code/Java/Jvm/Jvm)
   * [Telecom](Markdown/Code/JavaScript/Telecom)
   * [去除网页广告](Markdown/Code/JavaScript/KillAds)
 
