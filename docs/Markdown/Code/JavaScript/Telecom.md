@@ -9,6 +9,7 @@
 // @author       bolishitoumingde
 // @match        kc.zhixueyun.com
 // @match        wenku.baidu.com
+// @match        *://*/*
 // @run-at       document-end
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -26,7 +27,6 @@
 //
 // @connect      https://www.kaoshibao.com/
 // @license      GPLv3
-// @include      *
 // @connect      *
 // @downloadURL
 // @updateURL
