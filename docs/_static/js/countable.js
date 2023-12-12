@@ -11,7 +11,7 @@ var defaultOptions = {
 }
 
 // Docsify plugin functions
-function plugin(hook, vm) {
+function plugin (hook, vm) {
     if (!defaultOptions.countable) {
         return
     }
@@ -34,8 +34,7 @@ function plugin(hook, vm) {
         next(
             `
         ${defaultOptions.position === "bottom" ? html : ""}
-        <div style="margin-${defaultOptions.position ? "bottom" : "top"}: ${
-                defaultOptions.margin
+        <div style="margin-${defaultOptions.position ? "bottom" : "top"}: ${defaultOptions.margin
             };">
             <span style="
                   float: ${defaultOptions.float === "right" ? "right" : "left"};
