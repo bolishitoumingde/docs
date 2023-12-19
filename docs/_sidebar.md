@@ -4,6 +4,7 @@
 * Windows
   * [Java环境变量自动构建及版本切换](Markdown/Windows/Java环境变量自动构建及版本切换)
   * [批量修改多级文件夹内的文件后缀名](Markdown/Windows/批量修改多级文件夹内的文件后缀名)
+  * [配置Cloudflare R2 及 PicGo](Markdown/Windows/配置Cloudflare%20R2%20及%20PicGo)
 
 * Linux
   * [Linux](Markdown/Linux/Linux)
