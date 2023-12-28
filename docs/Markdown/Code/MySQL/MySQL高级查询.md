@@ -1,3 +1,20 @@
+## 相关语法函数介绍
+
+> **@**
+> @是用户变量，@@是系统变量。
+
+> **:=**
+>
+> 不只在set和update时时赋值的作用，在select也是赋值的作用。
+
+> **GROUP_CONCAT()**
+>
+> 将group by产生的同一个分组中的值连接起来，返回一个字符串结果。
+
+> **FIND_IN_SET()**
+>
+> 查询字段(strlist)中包含(str)的结果，返回结果为null或记录
+
 ## 父子查询
 
 ### 子集在其对应的父集下
@@ -50,4 +67,31 @@ CASE
 **查询结果**
 
 ![image](https://jsd.cdn.zzko.cn/gh/bolishitoumingde/hexo_img@main/image.oe49x3o5b7k.webp)
+
+### 父子递归
+
+> 通过递归实现父查子和子查父
+
+**建表语句**
+
+```sql
+DROP TABLE IF EXISTS `ds_relation_folder`;
+CREATE TABLE `ds_relation_folder` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增Id',
+  `parent_folder_id` int(11) NOT NULL COMMENT '父类文件夹Id',
+  `child_folder_id` int(11) DEFAULT NULL COMMENT '子文件夹Id',
+  `status` tinyint(4) DEFAULT 0,
+  `folder_layer` int(11) NOT NULL COMMENT '文件夹的层数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8
+```
+
+1. 父查子
+
+   **查询语句**
+
+   ```sql
+   ```
+
+   
 
