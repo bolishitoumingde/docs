@@ -23,8 +23,9 @@
 
 * Code
   * [Jvm](Markdown/Code/Java/Jvm/Jvm)
-  * [Telecom](Markdown/Code/JavaScript/Telecom)
-  * [去除网页广告](Markdown/Code/JavaScript/KillAds)
+  * JavaScript
+    * [Telecom](Markdown/Code/JavaScript/Telecom)
+    * [去除网页广告](Markdown/Code/JavaScript/KillAds)
   * MySQL
     * [MySQL高级查询](Markdown/Code/MySQL/MySQL高级查询.md)
 * 家庭
