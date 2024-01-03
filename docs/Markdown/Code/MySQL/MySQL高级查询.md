@@ -84,41 +84,46 @@ CREATE TABLE `menu` (
   PRIMARY KEY (`id`),
   KEY `idx_valid` (`parent_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜单表';
+
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (1, '菜单A', 0);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (2, '菜单B', 0);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (3, '菜单Aa', 1);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (4, '菜单Ab', 1);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (5, '菜单Ac', 1);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (6, '菜单Aaa', 3);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (7, '菜单Aaaa', 6);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (8, '菜单Aaaaa', 7);
+INSERT INTO `menu` (`id`, `name`, `parent_id`) VALUES (9, '菜单Aaaaaa', 8);
 ```
 
-**查询语句1**
-
-> 查询结果不包括自身
+**查询语句**
 
 ```sql
-select m.* from (select @id as _id,(select @id:=parent_id from `menu` where id = _id)  from (select @id:=(select parent_id from `menu` where id = 9)) vm,`menu` m 
-where @id is not null) vm inner join `menu`  m where id = vm._id
+-- 查询结果不包括自身
+select `menu`.* from (
+	select @id as _id,(select @id:=parent_id from `menu` where id = _id)  
+from (
+	select @id:=(select parent_id from `menu` where id = 9)
+) vm,`menu` m 
+where @id is not null 
+) vm, `menu` where vm._id = `menu`.id;
+
+-- 查询结果包括自身
+select `menu`.* from (
+	select @id as _id,(select @id:=parent_id from `menu` where id = _id)  
+from (
+	select @id:=9
+) vm,`menu` m 
+where @id is not null 
+) vm, `menu` where vm._id = `menu`.id;
+
+-- 可以在末尾添加此句来升序排序
+-- ORDER BY `menu`.id
 ```
 
-**查询结果1**
+**查询结果**
 
-![image](https://jsd.cdn.zzko.cn/gh/bolishitoumingde/hexo_img@main/image.5rfbvl1cnn40.webp)
-
-**查询语句2**
-
-> 查询结果包括自身
-
-```sql
-SELECT
-	@r AS menuId,
-	( SELECT @r := parent_id FROM menu WHERE id = menuId ) AS parentId,
-	@l := @l + 1 AS lvl 
-FROM
-	( SELECT @r := 8, @l := 0 ) vars,
-	menu h 
-WHERE
-	@r <> 0 
-	AND parent_id > 0;
-```
-
-**查询结果2**
-
-![image](https://jsd.cdn.zzko.cn/gh/bolishitoumingde/hexo_img@main/image.ypmfztjypw0.webp)
+![image](https://jsd.cdn.zzko.cn/gh/bolishitoumingde/hexo_img@main/image.2205nwqhngow.png)
 
 #### 原理介绍
 
@@ -129,7 +134,7 @@ WHERE
 > -- 得到需要查询节点的父节点id
 
 ```sql	
-SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=8);
+SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=9);
 ```
 
 > -- 第二部分
@@ -138,7 +143,7 @@ SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=8);
 
 ```sql
 SELECT * FROM (
-	SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=8)
+	SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=9)
 ) vm, `menu` m;
 ```
 
@@ -169,7 +174,7 @@ from (
 	select @id:=(select parent_id from `menu` where id = 9)
 ) vm,`menu` m 
 where @id is not null 
-) vm, `menu`  where vm._id = `menu`.id;
+) vm, `menu` where vm._id = `menu`.id;
 ```
 
 **完整过程**
@@ -177,12 +182,12 @@ where @id is not null
 ```sql
 -- 第一部分
 -- 得到需要查询节点的父节点id
-SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=8);
+SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=9);
 
 -- 第二部分
 -- 根据查询到的父节点id和原表进行联合
 SELECT * FROM (
-	SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=8)
+	SELECT @id:=(SELECT parent_id FROM `menu` WHERE id=9)
 ) vm, `menu` m;
 
 -- 第三部分
@@ -203,6 +208,5 @@ from (
 	select @id:=(select parent_id from `menu` where id = 9)
 ) vm,`menu` m 
 where @id is not null 
-) vm, `menu`  where vm._id = `menu`.id;
+) vm, `menu` where vm._id = `menu`.id;
 ```
-
